@@ -1,5 +1,7 @@
 package sec02.exam04;
 
+import java.util.Scanner;
+
 public class ArithmeticExample {
 
 	public static void main(String[] args) {
@@ -34,6 +36,15 @@ public class ArithmeticExample {
 //		[입력] [출력]
 //		 55 => 50
 //		 60 => 60
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("2자리 정수를 입력하세요: ");
+		int num = scanner.nextInt();
+		
+		// 일의 자리 버리기(나누기 후 곱하기)
+		int result = num / 10 * 10;
+		System.out.println("출력: " + result);
 	}
 
 }
