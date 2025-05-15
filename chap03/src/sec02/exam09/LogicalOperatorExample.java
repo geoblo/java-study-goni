@@ -29,13 +29,6 @@ public class LogicalOperatorExample {
 		}
 		
 		// 정리: 연산의 결과는 같은데 효율성(속도)이 더 높으므로 &&, || 를 사용
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
