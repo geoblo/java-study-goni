@@ -1,5 +1,7 @@
 package sec01.exam05;
 
+import java.util.Scanner;
+
 public class SwitchExample {
 
 	public static void main(String[] args) {
@@ -46,6 +48,30 @@ public class SwitchExample {
 //		[출력]
 //		조명의 밝기를 입력하세요 (0~3): 3
 //		현재 조명의 밝기: 매우 밝은 조명입니다.
+		
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.print("조명의 밝기를 입력하세요 (0~3): ");
+        int brightness = scanner.nextInt();
+
+        System.out.print("현재 조명의 밝기: ");
+        switch (brightness) {
+            case 0:
+                System.out.println("조명을 끕니다.");
+                break;
+            case 1:
+                System.out.println("어두운 조명입니다.");
+                break;
+            case 2:
+                System.out.println("밝은 조명입니다.");
+                break;
+            case 3:
+                System.out.println("매우 밝은 조명입니다.");
+                break;
+            default:
+                System.out.println("올바른 입력이 아닙니다.");
+                break;
+        }
 		
 	}
 
