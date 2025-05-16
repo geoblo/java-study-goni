@@ -9,3 +9,8 @@ https://devkgn24.notion.site/14afda8bae578074bad4f9c76f5f50b9
 chap04.sec01 조건문 과제
 https://devkgn24.notion.site/14bfda8bae5780a192eddf35bfe9f3fe
 6번 문제: 과락 과목이 여러 개일 경우 입력한 순서에서 제일 첫번째 과락 과목만 출력
+
+chap04.sec02 반복문 과제
+https://devkgn24.notion.site/14cfda8bae578057991edf04f0f14832
+
+
