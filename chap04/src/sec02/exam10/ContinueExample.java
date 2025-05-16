@@ -27,6 +27,11 @@ public class ContinueExample {
 //		[출력]
 //		영희야생일축하해!
 		
+//		String str = "가나다";
+//		System.out.println(str[1]); // This is JS
+//		System.out.println(str.charAt(1)); // This is JAVA
+		
+		
 		
 	}
 
