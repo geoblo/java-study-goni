@@ -1,5 +1,7 @@
 package sec02.exam03;
 
+import java.util.Scanner;
+
 public class ForSumFrom1To100Example2 {
 
 	public static void main(String[] args) {
@@ -44,8 +46,22 @@ public class ForSumFrom1To100Example2 {
 //		 10  => 30
 //		 11  => 36
 		
+		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("숫자를 입력하세요: ");
+		int num = sc.nextInt();
 		
+		sum = 0;
+		if (num % 2 == 0) { // 짝수인 경우
+			for (int j = 2; j <= num; j += 2) {
+				sum += j;
+			}
+		} else { // 홀수인 경우
+			for (int j = 1; j <= num; j += 2) {
+				sum += j;
+			}
+		}
+		System.out.println("결과: " + sum);
 	}
 
 }
