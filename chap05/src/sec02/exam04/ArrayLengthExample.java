@@ -23,7 +23,12 @@ public class ArrayLengthExample {
 		
 		int[] attendance = {1, 1, 1, 1, 1, 0, 1, 0, 0, 1};
 		
+		int count = 0;
 		
+		for (int i = 0; i < attendance.length; i++) {
+			if (attendance[i] == 1) count++;
+		}
+		System.out.println("출석한 학생 수: " + count);
 		
 	}
 
