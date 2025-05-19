@@ -13,4 +13,15 @@ https://devkgn24.notion.site/14bfda8bae5780a192eddf35bfe9f3fe
 chap04.sec02 반복문 과제
 https://devkgn24.notion.site/14cfda8bae578057991edf04f0f14832
 
+chap05. 배열 과제
+https://devkgn24.notion.site/14ffda8bae5780d6a9f2fdc204a7cfe6
+1번 문제: Arrays.sort()를 사용하지 않고 직접 구현해 볼 것 => 인접한 두 값을 비교하고 순서를 바꾸는 과정을 반복
+배열 길이 n이면 최대 n-1회전이 필요
+<예시>
+정렬 대상: {5, 3, 8, 4, 2}
+1회전 → {3, 5, 4, 2, 8}
+2회전 → {3, 4, 2, 5, 8}
+3회전 → {3, 2, 4, 5, 8}
+4회전 → {2, 3, 4, 5, 8} ← 정렬 완료
 
+6, 7, 8번 문제: 메소드(Arrays.copyOf())를 이용하여 복사하는게 더 간결함
