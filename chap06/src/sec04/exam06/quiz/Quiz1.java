@@ -24,8 +24,8 @@ public class Quiz1 {
 		double n4 = sc.nextDouble();
 		
 		Adder adder = new Adder();
-		adder.add(n1,n2);
-		adder.add(n3,n4);
+		adder.add(n1, n2);
+		adder.add(n3, n4);
 	}
 	
 }
