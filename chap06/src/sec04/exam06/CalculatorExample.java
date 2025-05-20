@@ -30,4 +30,5 @@ public class CalculatorExample {
 //	public void test(int num, String string) {} // 6번
 //	public void test(String str, int i) {}      // 7번
 
+//  정답: 1, 2, 5, 7번
 }
