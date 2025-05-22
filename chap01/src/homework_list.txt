@@ -35,3 +35,5 @@ https://devkgn24.notion.site/150fda8bae5780688dd1da6a88c552ec
 
 객체 과제
 https://devkgn24.notion.site/150fda8bae57800d91b0e56a40cf0894
+
+chap07. 상속 과제
