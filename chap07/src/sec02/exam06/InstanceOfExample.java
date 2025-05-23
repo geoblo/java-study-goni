@@ -19,7 +19,21 @@ public class InstanceOfExample {
 			System.out.println("강제 타입 변환 성공");
 		}
 		
+		Parent parentA = new Child();
+		method1(parentA);
 		
+		Parent parentB = new Parent();
+		method1(parentB);
+	}
+	
+	public static void method1(Parent parent) {
+		// 안전하게 타입 검사 후 변환하기
+		if (parent instanceof Child) {
+			Child child = (Child) parent;
+			System.out.println("method1 - Child로 변환 성공");
+		} else {
+			System.out.println("method1 - Child로 변환되지 않음");			
+		}
 	}
 
 }
