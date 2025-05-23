@@ -17,7 +17,7 @@ public class Run {
 		robot[2] = new DrawRobot();
 		
 		for (Actionable r : robot) {
-			r.action(); 
+			r.action();
 		}
 	}
 
