@@ -13,7 +13,7 @@ public class CatchOrderExample {
 			int value2 = Integer.parseInt(data2); // "a20" 같이 문자가 섞이면 실행 예외 발생
 			int result = value1 + value2;
 			System.out.println(data1 + "+"  + data2 + "=" + result);
-		} 
+		}
 //		catch (Exception e) {
 //			System.out.println("실행에 문제가 있습니다.");
 //		} // 에러 메시지: Unreachable catch block 
