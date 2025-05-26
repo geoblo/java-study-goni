@@ -38,3 +38,9 @@ https://devkgn24.notion.site/150fda8bae57800d91b0e56a40cf0894
 
 chap07. 상속 과제
 https://devkgn24.notion.site/153fda8bae57804dbc42fed00687869f
+
+chap08. 다형성(추상 클래스, 인터페이스) 과제
+https://devkgn24.notion.site/153fda8bae578074b8afe1ab3aca9991
+
+
+
