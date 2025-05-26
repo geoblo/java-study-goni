@@ -40,7 +40,13 @@ public class Run {
 		
 		for (Animal animal : animalArr) {
 			// Quiz
+			System.out.println(animal.getKind() + ", 다리수: " + animal.getLeg() + "개");
+			animal.sound();
+			animal.eat();
 			
+			if (animal instanceof Flyable flyAnimal) {
+				flyAnimal.fly();
+			}
 		}
 	}
 
