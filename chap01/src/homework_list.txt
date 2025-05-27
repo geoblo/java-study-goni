@@ -42,5 +42,6 @@ https://devkgn24.notion.site/153fda8bae57804dbc42fed00687869f
 chap08. 다형성(추상 클래스, 인터페이스) 과제
 https://devkgn24.notion.site/153fda8bae578074b8afe1ab3aca9991
 
-
+chap10. 예외처리 과제
+https://devkgn24.notion.site/156fda8bae57808aa088e126fd197687
 
