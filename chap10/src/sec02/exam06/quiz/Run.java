@@ -16,7 +16,8 @@ public class Run {
 //		2) 생성자:
 //			- 기본 생성자
 //			- 사용자명과 초기 잔액을 받는 생성자
-//		3) 메소드:
+//		3) Getter
+//		4) 메소드:
 //			- public void deposit(int amount)
 //			입금 금액만큼 잔액에 더하고 출력 예시와 같은 메시지를 출력합니다.
 //			- public void withdraw(int amount)
@@ -39,7 +40,17 @@ public class Run {
 	
 	public static void main(String[] args) {
 		// Quiz
-
+		Account account = new Account("김철수", 10000);
+		
+		try {
+			account.withdraw(3000);
+			account.deposit(5000);
+			account.withdraw(14000);
+		} catch (InsufficientBalanceException e) {
+			System.out.println("출금 실패: " + e.getMessage());
+		}
+		
+		System.out.println("현재 잔액: " + account.getBalance() + "원");
 	}
 
 }
