@@ -45,3 +45,11 @@ https://devkgn24.notion.site/153fda8bae578074b8afe1ab3aca9991
 chap10. 예외처리 과제
 https://devkgn24.notion.site/156fda8bae57808aa088e126fd197687
 
+chap11. 문자열 과제(2번 문제 제외)
+https://devkgn24.notion.site/String-15afda8bae5780c59b45cfda95dd7d99
+
+
+
+
+
+
