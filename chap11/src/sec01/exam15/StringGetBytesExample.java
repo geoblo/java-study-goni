@@ -38,18 +38,6 @@ public class StringGetBytesExample {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
