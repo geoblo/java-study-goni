@@ -10,11 +10,11 @@ public class Quiz3 {
 //	※ 정적(static) 메소드 안에서 인스턴스 메소드를 쓸 수 없습니다.
 	
 //	[입력]
-//	1) 123AB123 AB
+//	1) 123AB123AB12 AB
 //	2) 123AB123 13
 	
 //	[출력]
-//	1) 1
+//	1) 2
 //	2) 0
 
 //  [힌트]
@@ -26,5 +26,25 @@ public class Quiz3 {
         String str2 = sc.nextLine();
         System.out.println(count(str1, str2));
 	}
-
+	
+	public static int count(String original, String target) {
+		int count = 0;
+		int index = 0;
+		
+		// indexOf를 이용해 반복해서 찾기
+//		index = original.indexOf(target);
+//		while (index != -1) {
+//			count++;
+//			index += target.length(); // 다음 검색 위치로 이동
+//			index = original.indexOf(target, index); // 다음 위치에서 다시 검색
+//		}
+		
+		// 축약형: indexOf를 한 번만 쓰기
+		while ((index = original.indexOf(target, index)) != -1) {
+			count++;
+			index += target.length(); // 다음 검색 위치로 이동
+		}
+		
+		return count;
+	}
 }
