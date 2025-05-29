@@ -1,6 +1,10 @@
 package sec02.exam01;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateExample {
@@ -48,27 +52,27 @@ public class DateExample {
 		// 시간 정보 없음
 		// 시간대 정보 없음
 		// 생일, 기념일, 마감일 등 "날짜만 필요한 경우"에 사용
-		
+		LocalDate date = LocalDate.now();
+		System.out.println(date);
 		
 		// 2. LocalDateTime
 		// 날짜 + 시간(시, 분, 초, 나노초) 정보를 가짐
 		// 시간대 정보 없음
 		// 로그 생성 시간, 예약 시간 등 "날짜 + 시간"이 필요한 경우 사용
-		
+		LocalDateTime dateTime = LocalDateTime.now();
+		System.out.println(dateTime);
 		
 		// 3. ZonedDateTime
 		// 날짜 + 시간 + 시간대(ZoneId) 정보를 모두 포함
 		// 표준 시간대 간의 변환 필요할 때 사용
 		// 서버 간 시간 동기화, 국제화 시스템 등에 유용
-		
+		ZonedDateTime zonedDateTime = ZonedDateTime.now();
+		System.out.println(zonedDateTime);
 		
 		// 4. DateTimeFormatter
 		// 날짜/시간 -> 문자열 또는 문자열 -> 날짜/시간 변환에 사용
-		
-		
-		
-		
-		
+		DateTimeFormatter fommatter = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH시 mm분 ss초");
+		System.out.println(dateTime.format(fommatter));
 	}
 
 }
