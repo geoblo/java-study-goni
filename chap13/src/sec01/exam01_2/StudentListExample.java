@@ -45,20 +45,6 @@ public class StudentListExample {
 		for (Student s : studentList) {
 			System.out.println(s.getName() + " - " + s.getAge());
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
