@@ -3,7 +3,6 @@ package sec01.exam01;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class ArrayListExample {
 
