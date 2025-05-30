@@ -1,6 +1,7 @@
 package sec01.exam01;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -84,19 +85,46 @@ public class ArrayListExample {
 		}
 		System.out.println();
 		
+		// 저장된 모든 객체 삭제
+		list.clear();
+		System.out.println(list.isEmpty());
+		System.out.println("총 객체수: " + list.size());
+		System.out.println();
 		
+		// 요소 정렬
+		List<String> strList = new ArrayList<String>();
+		strList.add("나");
+		strList.add("가");
+		strList.add("사");
+		strList.add("하");
+		strList.add("마");
+		System.out.println(strList);
 		
+		// 오름차순
+		Collections.sort(strList);
+		System.out.println(strList);
 		
+		// 내림차순
+		Collections.sort(strList, Collections.reverseOrder());
+		System.out.println(strList);
 		
+		System.out.println();
 		
+		List<Integer> numList = new ArrayList<Integer>();
+		numList.add(11);
+		numList.add(5);
+		numList.add(1);
+		numList.add(9);
+		numList.add(3);
+		System.out.println(numList);
 		
+		// 오름차순
+		Collections.sort(numList);
+		System.out.println(numList);
 		
-		
-		
-		
-		
-		
-		
+		// 내림차순
+		Collections.sort(numList, Collections.reverseOrder());
+		System.out.println(numList);
 	}
 
 }
