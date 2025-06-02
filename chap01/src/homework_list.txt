@@ -49,8 +49,12 @@ chap11. 문자열 과제
 https://devkgn24.notion.site/String-15afda8bae5780c59b45cfda95dd7d99
 2번 문제는 ArrayList 쓰지말고 배열로 풀 것
 
-chap13. List 과제
+chap13. 
+List 과제
 https://devkgn24.notion.site/158fda8bae578064ab5aceba2b8cb6d6
+
+Set 과제
+https://devkgn24.notion.site/159fda8bae5780b98da8ed1e035d0586
 
 
 
