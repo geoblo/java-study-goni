@@ -1,5 +1,9 @@
 package sec01.exam04.quiz;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class Quiz3 {
 	// Quiz
 //	스포츠 장비 대여점에서 대여 가능한 장비 목록을 관리하려고 합니다.
@@ -49,7 +53,45 @@ public class Quiz3 {
 //	- 축구공: 3000원
 	
 	public static void main(String[] args) {
+		Set<Equipment> storage1 = new HashSet<Equipment>();
+		storage1.add(new Equipment("라켓", 15000));
+		storage1.add(new Equipment("배트", 6000));
+		storage1.add(new Equipment("축구공", 3000));
 		
+		Set<Equipment> storage2 = new HashSet<Equipment>();
+		storage2.add(new Equipment("배트", 6000));
+		storage2.add(new Equipment("야구공", 5000));
+		storage2.add(new Equipment("글로브", 9000));
+		
+		Set<Equipment> union = new HashSet<Equipment>();
+		union.addAll(storage1);
+		union.addAll(storage2);
+		System.out.println("*** 합집합 ***");
+		Iterator<Equipment> iterator = union.iterator();
+		while (iterator.hasNext()) {
+			Equipment equipment = iterator.next();
+			System.out.println(equipment);
+		}
+		
+		Set<Equipment> inter = new HashSet<Equipment>();
+		inter.addAll(storage1);
+		inter.retainAll(storage2);
+		System.out.println("*** 교집합 ***");
+		iterator = inter.iterator();
+		while (iterator.hasNext()) {
+			Equipment equipment = iterator.next();
+			System.out.println(equipment);
+		}
+		
+		Set<Equipment> diff = new HashSet<Equipment>();
+		diff.addAll(storage1);
+		diff.removeAll(storage2);
+		System.out.println("*** 차집합 ***");
+		iterator = diff.iterator();
+		while (iterator.hasNext()) {
+			Equipment equipment = iterator.next();
+			System.out.println(equipment);
+		}
 	}
 
 }

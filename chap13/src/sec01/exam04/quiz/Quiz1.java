@@ -1,5 +1,8 @@
 package sec01.exam04.quiz;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Quiz1 {
 	// Quiz
 //	노래 정보를 담고 있는 Song 클래스를 설계하고
@@ -33,7 +36,18 @@ public class Quiz1 {
 //	[{제목=Whiplash, 가수=에스파}, {제목=HAPPY, 가수=DAY6}]
 	
 	public static void main(String[] args) {
+		Set<Song> set1 = new HashSet<Song>();
+		set1.add(new Song("APT.", "로제"));
+		set1.add(new Song("Whiplash", "에스파"));
+		set1.add(new Song("POWER", "G-DRAGON"));
 		
+		Set<Song> set2 = new HashSet<Song>();
+		set2.add(new Song("Whiplash", "에스파"));
+		set2.add(new Song("HAPPY", "DAY6"));
+		set2.add(new Song("HAPPY", "DAY6"));
+		
+		System.out.println(set1);
+		System.out.println(set2);
 	}
 
 }

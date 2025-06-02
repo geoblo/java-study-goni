@@ -1,5 +1,8 @@
 package sec01.exam04.quiz;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Quiz2 {
 	// Quiz
 //	여러명의 손님이 음식 주문을 하고 있습니다.
@@ -20,17 +23,29 @@ public class Quiz2 {
 //	출력 예시에 맞춰 toString() 재정의
 	
 //	[초기 데이터]
-//	이름    가격
-//	샐러드   14000
-//	치킨    23000
-//	치킨    50000
+//	이름   |  가격
+//  -------------
+//	샐러드 |  14000
+//	치킨   |  23000
+//	치킨   |  50000
 	
 //	[출력]
 //	5만원 치킨 취소: [치킨:23000, 샐러드:14000]
 //	전체 주문 취소: []
 	
 	public static void main(String[] args) {
+		Set<Food> foods = new HashSet<Food>();
 		
+		foods.add(new Food("샐러드", 14000));
+		foods.add(new Food("치킨", 23000));
+		foods.add(new Food("치킨", 50000));
+		System.out.println(foods);
+		
+		foods.remove(new Food("치킨", 50000));
+		System.out.println("5만원 치킨 취소: " + foods);
+		
+		foods.clear();
+		System.out.println("전체 주문 취소: " + foods);
 	}
 
 }
