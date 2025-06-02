@@ -1,7 +1,11 @@
 package sec01.exam04;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 // HashSet은 특정 상황에서만 사용되며, List 계열보다는 사용 빈도가 낮은 편
@@ -104,17 +108,43 @@ public class HashSetExample {
 		// 새로운 HashSet을 반환하는 것이 아님!!
 		
 		
+		// 요소 정렬
+		// HashSet 자체는 정렬 기능이 없는 컬렉션이기 때문에
+		// 정렬을 하려면 다른 컬렉션으로 변환한 뒤에 정렬
+		// List로 변환 후 Collections.sort() 사용
+		Set<String> fruits = new HashSet<String>();
+		fruits.add("Banana");
+		fruits.add("Apple");
+		fruits.add("Orange");
+		System.out.println(fruits);
+		
+		// Set -> List로 변환
+		List<String> fruitsList = new ArrayList<String>(fruits);
+		
+		// 정렬
+		Collections.sort(fruitsList); // 오름차순 정렬
+		System.out.println(fruitsList);
+		
+		// 필요하면 정렬된 순서를 유지하는 Set으로 다시 만들기
+		Set<String> sortedSet = new LinkedHashSet<String>(fruitsList);
+		System.out.println(sortedSet);
 		
 		
+		// ArrayList의 요소에서 중복을 제거
+		List<String> list = new ArrayList<String>();
+		list.add("Java");
+		list.add("Spring");
+		list.add("Java"); // 중복
+		list.add("JDBC");
+		System.out.println(list);
 		
+		// HashSet을 이용해 중복 제거
+		Set<String> javaClass = new HashSet<String>(list); // 중복 제거 완료
+		System.out.println(javaClass);
 		
-		
-		
-		
-		
-		
-		
-		
+		// 필요 시 다시 List로 변환
+		List<String> deduplicatedList = new ArrayList<String>(javaClass);
+		System.out.println(deduplicatedList);
 	}
 
 }
