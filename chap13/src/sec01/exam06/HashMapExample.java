@@ -23,13 +23,20 @@ public class HashMapExample {
 		Map<String, Integer> map = new HashMap<>(); // 생략하면 왼쪽 Map에 지정된 타입을 따라 감(타입 추론)
 		
 		// 객체 저장
+		// put()은 내부적으로 키가 이미 존재하는지 확인하고,
+		// 존재하지 않으면 새로 추가하고 null 반환
+		// 존재하면 값을 덮어쓰고, 덮어쓰기 전의 값을 반환
 		map.put("김재현", 85);
 		map.put("홍길동", 90);
 		map.put("동장군", 80);
 		map.put("홍길동", 95); // 키가 같으면 기존의 값은 없어지고 새로운 값으로 덮어씀(기존 Entry에서 값만 대체됨)
 		System.out.println("총 Entry 수: " + map.size());
 		
-		
+		// 객체 찾기
+		// Key값(이름)으로 Value(점수)를 검색
+		// 요소를 찾지 못하면 null을 반환
+		System.out.println("\t홍길동 : " + map.get("홍길동"));
+		System.out.println();
 		
 		
 		
