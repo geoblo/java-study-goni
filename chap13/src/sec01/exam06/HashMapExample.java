@@ -21,8 +21,8 @@ public class HashMapExample {
 		// Map 컬렉션 생성
 		// 키의 타입으로는 일반적으로 1. String, 2. Integer/Long 을 많이 씀
 		// 이유? 동등 객체로 판단하기 위한 equals()와 hashCode()가 이미 잘 구현되어 있음
-//		Map<String, Integer> map = new HashMap<String, Integer>();
-		Map<String, Integer> map = new HashMap<>(); // 생략하면 왼쪽 Map에 지정된 타입을 따라 감(타입 추론)
+		Map<String, Integer> map = new HashMap<String, Integer>();
+//		Map<String, Integer> map = new HashMap<>(); // 생략하면 왼쪽 Map에 지정된 타입을 따라 감(타입 추론)
 		
 		// 객체 저장
 		// put()은 내부적으로 키가 이미 존재하는지 확인하고,
@@ -113,18 +113,32 @@ public class HashMapExample {
 		// 반면 for-each에서 map.remove()를 쓰면 오류 발생 가능
 		
 		// 객체 검색
-		// 
+		// HashMap은 Key와 Value를 가지고 있음
+		// Key와 Value를 기준으로 특정값의 포함 여뷰를 판단할 수 있음
 		
+		// containsKey()
+		// HashMap 내에 특정키가 있는지 확인
+		String keyToCheck = "김재현";
+		if (map.containsKey(keyToCheck)) {
+			System.out.println("HashMap에 " + keyToCheck + " 키가 존재합니다.");
+		} else {
+			System.out.println("HashMap에 " + keyToCheck + " 키가 존재하지 않습니다.");			
+		}
 		
+		// containsValue()
+		// HashMap 내에 특정값이 있는지 확인
+		// 찾는 값이 있으면 첫 번째로 발견되는 즉시 true를 반환
+		int valueToCheck = 80;
+		if (map.containsValue(valueToCheck)) {
+			System.out.println("HashMap에 " + valueToCheck + " 값이 존재합니다.");
+		} else {
+			System.out.println("HashMap에 " + valueToCheck + " 값이 존재하지 않습니다.");			
+		}
+		System.out.println();
 		
-		
-		
-		
-		
-		
-		
-		
-		
+		// 객체 전체 삭제
+		map.clear(); // 모든 Map.Entry 삭제
+		System.out.println("총 Entry 수: " + map.size());
 	}
 
 }
