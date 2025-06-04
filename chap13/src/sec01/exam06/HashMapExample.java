@@ -89,6 +89,7 @@ public class HashMapExample {
 			String key = entry.getKey();
 			Integer value = entry.getValue();
 			System.out.println("\t" + key + " : " + value);
+//			entryIterator.remove(); // 테스트
 		}
 		System.out.println();
 		
@@ -99,6 +100,7 @@ public class HashMapExample {
 			String key = entry.getKey();
 			Integer value = entry.getValue();
 			System.out.println("\t" + key + " : " + value);
+//			map.remove(key); // 테스트
 		}
 		System.out.println();
 		
@@ -109,6 +111,9 @@ public class HashMapExample {
 		// 예: 순회 중 요소를 안전하게 제거할 때
 		// Iterator.remove()는 ConcurrentModificationException 없이 안전하게 삭제 가능
 		// 반면 for-each에서 map.remove()를 쓰면 오류 발생 가능
+		
+		// 객체 검색
+		// 
 		
 		
 		
