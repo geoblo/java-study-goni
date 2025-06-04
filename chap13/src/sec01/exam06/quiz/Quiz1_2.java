@@ -68,6 +68,11 @@ public class Quiz1_2 {
 //		전화번호: 111-111-111
 //		월급: 2300000
 		
+		Information emma = map.get("Emma");
+		emma.setPhone("111-111-111");
+		System.out.println("===== Emma의 정보 =====");
+		System.out.println("전화번호: " + emma.getPhone());
+		System.out.println("월급: " + emma.getSalary());
 		
 	}
 
