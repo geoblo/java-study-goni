@@ -21,12 +21,17 @@ public class WriteExample {
 	public static void main(String[] args) throws Exception {
 		// 데이터 도착지를 test1.db 파일로 하는 바이트 기반 파일 출력 스트림을 생성
 		OutputStream os = new FileOutputStream("C:/Temp/test1.db"); // 바이트를 파일에 출력해서 저장하는 기능을 가짐
+//		OutputStream os = new FileOutputStream("C:/Temp/test1.txt"); // 바이트를 파일에 출력해서 저장하는 기능을 가짐
 		
 		// 출력할 바이트(0~255까지)
 		// 값의 범위를 넘어가면 오버플로우, 언더플로우 발생!
 		byte a = 10;
 		byte b = 20;
 		byte c = 30;
+		
+//		char a = '가';
+//		char b = '나';
+//		char c = '다';
 		
 		// 출력 스트림을 이용해 출력하는 메소드
 		// 1byte씩 세 번 출력
