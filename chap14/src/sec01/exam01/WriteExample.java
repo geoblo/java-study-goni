@@ -41,9 +41,27 @@ public class WriteExample {
 		// 반드시 write() 후에 flush() 수행
 		os.flush(); // 버퍼를 비움(버퍼에 쌓여있는 데이터를 한꺼번에 출력)
 		
+		// 참고: 모든 출력 스트림이 다 버퍼를 갖고 있진 않다.
+		// FileOutputStream에는 내부 버퍼가 존재하지 않음
+		// 즉, write() 시 곧바로 OS에 전달되어 출력
+		// flush()가 필수가 아니지만, 그래도 명시적으로 호출하는 것이 안전
+		// 내부적으로 버퍼를 사용하는 클래스들은 flush()가 필수
+		
 		// 더 이상 쓰지 않을 때는 출력 스트림 닫기
 		os.close(); // 출력 스트림이 사용했던 자원들(메모리)을 풀어주기 위해
 		// close() 안에서도 스트림을 닫기 전에 flush() 기능을 수행함
+		
+		// 참고: try-with-resources
+		// 리소스를 자동으로 닫아주는 try 문법
+		// close()를 명시적으로 호출하지 않아도, try 블록이 끝나거나 예외가 발생되는 즉시 자동으로 자원 정리
+		// AutoCloseable을 구현한 클래스는 try-with-resources로 자동 종료 가능
+//		try (OutputStream os2 = new FileOutputStream("C:/Temp/test1.db")) {
+//			os2.write(a);
+//			os2.write(b);
+//			os2.write(c);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		
 		// 참고: 바이너리 파일, 바이너리 데이터란?
 		// 말 그대로 0과 1로 이루어진 이진 데이터
