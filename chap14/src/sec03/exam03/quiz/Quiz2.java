@@ -1,5 +1,7 @@
 package sec03.exam03.quiz;
 
+import java.io.File;
+
 public class Quiz2 {
 	// Quiz
 //	먼저 "C:\test\sub" 폴더 아래에 test1.txt, test2.txt, test3.txt 파일을 만들어주세요.
@@ -15,7 +17,10 @@ public class Quiz2 {
 //	C:\test\sub\test3.txt -> 삭제 완료
 	
 	public static void main(String[] args) {
+		FileManager fileManager = new FileManager();
 		
+		File dir = new File("C:/test/sub");
+		fileManager.deleteFile(dir);
 	}
 
 }
