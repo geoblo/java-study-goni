@@ -39,6 +39,17 @@ public class NonBufferVsBufferExample {
 		fos.close();
 		bis.close();
 		bos.close();
+		// 보조 스트림만 close() 해도 내부의 기본 스트림까지 자동으로 닫힘
+		// try-with-resources를 사용하는 것이 가장 안전하고 깔끔
+		try (
+			BufferedInputStream bis2 = new BufferedInputStream(new FileInputStream(originalFilePath2));
+			BufferedOutputStream bos2 = new BufferedOutputStream(new FileOutputStream(targetFilePath2));
+		) {
+			// 파일 복사 로직
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// 모든 스트림이 자동으로 닫힘
 	}
 	
 	// 입력 스트림에서 데이터를 읽고 출력 스트림으로 데이터를 보내는 코드(데이터를 복사하는 코드)
