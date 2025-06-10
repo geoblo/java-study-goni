@@ -26,7 +26,7 @@ public class MemberMenu {
 		// 메뉴 번호 입력 : 
 		
 		while (true) {
-			System.out.println("===== (주)가남에 오신것을 환영합니다. =====");
+			System.out.println("===== (주)구디에 오신것을 환영합니다. =====");
 			System.out.println("원하시는 메뉴의 번호를 입력하세요.");
 			System.out.println("1. 회원가입"); // joinMember() 실행
 			System.out.println("2. 로그인");	// logIn() 실행 후 memberMenu() 실행
