@@ -1,8 +1,10 @@
-package board;
+package board.dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class JDBConnection {
@@ -39,7 +41,8 @@ public class JDBConnection {
 	public JDBConnection() {
 		// JDBC 드라이버 로드
 		// mysql-connector-j.xxx.jar 드라이버의 클래스를 로드
-		
+//		Class.forName("com.mysql.cj.jdbc.Driver"); // Driver 클래스의 위치
+		// JDK 최신 버전에서는 명시적 로드 안해도 됨
 		
 		// DB에 연결
 		// - 연결에 필요한 정보: URL, id, pw
@@ -47,19 +50,27 @@ public class JDBConnection {
 		//      * jdbc:mysql = 프로토콜
 		//		* 내 PC의 IP주소: localhost = 127.0.0.1
 		//		* 3306: MySQL 데이터베이스의 기본 포트
+//		String url = "jdbc:mysql://127.0.0.1:3306/jdbc_board?serverTimezone=Asia/Seoul&useSSL=false";
+		String url = "jdbc:mysql://127.0.0.1:3306/jdbc_board";
+		String id = "root";
+		String pw = "mysql1234";
 		
-		
-		// DriverManager: 자바 프로그램을 JDBC 드라이버에 연결시켜주는 클래스
-		// 자바 프로그램이 적절한 JDBC 드라이버를 통해 DB에 접속할 수 있도록 연결을 중개
-		// (자바 프로그램 -> JDBC 드라이버 -> DB)
-		// getConnection() 메소드로 DB에 연결 요청하고 생성된 Connection 객체를 반환
-		
-		
+		try {
+			// DriverManager: 자바 프로그램을 JDBC 드라이버에 연결시켜주는 클래스
+			// 자바 프로그램이 적절한 JDBC 드라이버를 통해 DB에 접속할 수 있도록 연결을 중개
+			// (자바 프로그램 -> JDBC 드라이버 -> DB)
+			// getConnection() 메소드로 DB에 연결 요청하고 생성된 Connection 객체를 반환
+			conn = DriverManager.getConnection(url, id, pw);
+			
+			System.out.println("DB 연결 성공!");
+		} catch (SQLException e) {
+			System.out.println("DB 연결 실패!");
+			e.printStackTrace();
+		}
 	}
 	
-	
-	public static void main(String[] args) {
-
-	}
-
+	// DB 연결 테스트 후에 주석 처리
+//	public static void main(String[] args) {
+//		JDBConnection jdbc = new JDBConnection();
+//	}
 }

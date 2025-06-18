@@ -51,7 +51,7 @@
 
 
 // 5. 프로젝트 구조
-// jdbc-board
+// jdbc-board/src/board
 // ├── dao/
 // │   └── BoardDAO.java
 // │   └── JDBConnection.java
@@ -63,7 +63,7 @@
 // └── Main.java
 
 // 1) 데이터 계층 (Data Access Layer): 데이터베이스와 상호작용하는 계층
-// - DTO(Data Transfer Object) 또는 VO: 데이터 전송 객체
+// - DTO(Data Transfer Object) 또는 VO(Value Object): 데이터 전송 객체, 값을 담는 객체
 // 서로 다른 클래스 간에, 서로 다른 계층 사이에서 데이터를 전달하기 위해 사용
 // DB의 테이블 구조와 대응되는 순수한 데이터 객체
 // 주로, 데이터베이스로부터 읽어온 데이터 단위를 객체로 가져와서 사용
@@ -81,7 +81,7 @@
 // 주로 DAO를 호출해서 로직을 조합하거나 조건을 처리 
 
 // 3) 프레젠테이션 계층(Presentation Layer)
-// - Main(또는 Controller): 사용자와 직접 상호작용하는 계층(UI 역할)
+// - Main(View + Controller): 사용자와 직접 상호작용하는 계층(UI 역할)
 // 사용자의 입력을 받고, Service 계층을 호출해서 결과를 출력하는 콘솔 기반 인터페이스
 // 입력/출력을 담당하고 전체적인 흐름을 제어
 
