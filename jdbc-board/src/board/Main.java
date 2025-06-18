@@ -138,6 +138,33 @@ public class Main {
 			System.out.println("★ 게시글 등록에 실패하였습니다.");
 		}
 	}
+	
+	/**
+	 * 게시글 수정
+	 */
+	private static void update() {
+		System.out.println("========== 게시글 수정 ==========");
+		
+		System.out.print("게시글 번호: ");
+		int no = sc.nextInt();
+		sc.nextLine();
+		
+		input();
+	}
+	
+	/**
+	 * 게시글 삭제
+	 */
+	private static void delete() {
+		System.out.println("========== 게시글 삭제 ==========");
+		
+		System.out.print("게시글 번호: ");
+		int no = sc.nextInt();
+		sc.nextLine();
+		
+	}
+
+	
 
 	public static void main(String[] args) {
 		int menuNo = 0;
@@ -165,22 +192,14 @@ public class Main {
 					insert(); // 게시글 등록
 					break;
 				case 4:
-//					update(); // 게시글 수정
+					update(); // 게시글 수정
 					break;
 				case 5:
-//					delete(); // 게시글 삭제
+					delete(); // 게시글 삭제
 					break;
 			}
 		}
 		System.out.println("프로그램을 종료합니다!");
 	}
-
-	
-
-	
-
-
-
-	
 
 }
