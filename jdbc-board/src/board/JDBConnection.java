@@ -35,6 +35,29 @@ public class JDBConnection {
 	public PreparedStatement psmt;
 	public ResultSet rs;
 	
+	// 기본 생성자
+	public JDBConnection() {
+		// JDBC 드라이버 로드
+		// mysql-connector-j.xxx.jar 드라이버의 클래스를 로드
+		
+		
+		// DB에 연결
+		// - 연결에 필요한 정보: URL, id, pw
+		// URL: jdbc:mysql://도메인:[PORT]/[스키마]?옵션파라미터
+		//      * jdbc:mysql = 프로토콜
+		//		* 내 PC의 IP주소: localhost = 127.0.0.1
+		//		* 3306: MySQL 데이터베이스의 기본 포트
+		
+		
+		// DriverManager: 자바 프로그램을 JDBC 드라이버에 연결시켜주는 클래스
+		// 자바 프로그램이 적절한 JDBC 드라이버를 통해 DB에 접속할 수 있도록 연결을 중개
+		// (자바 프로그램 -> JDBC 드라이버 -> DB)
+		// getConnection() 메소드로 DB에 연결 요청하고 생성된 Connection 객체를 반환
+		
+		
+	}
+	
+	
 	public static void main(String[] args) {
 
 	}
