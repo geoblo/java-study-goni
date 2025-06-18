@@ -122,13 +122,21 @@ public class Main {
 		return board;
 	}
 	
-	
 	/**
 	 * 게시글 등록
 	 */
 	private static void insert() {
 		System.out.println("========== 게시글 등록 ==========");
 		
+		Board board = input();
+		
+		// 게시글 등록 요청
+		int result = boardService.insert(board);
+		if (result > 0) {
+			System.out.println("★ 게시글이 등록되었습니다.");
+		} else {
+			System.out.println("★ 게시글 등록에 실패하였습니다.");
+		}
 	}
 
 	public static void main(String[] args) {
