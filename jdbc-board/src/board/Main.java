@@ -90,6 +90,21 @@ public class Main {
 		System.out.println("========================================");
 		System.out.println();
 	}
+	
+	/**
+	 * 게시글 조회
+	 */
+	private static void select() {
+		System.out.println("========== 게시글 조회 ==========");
+		System.out.print("글 번호: ");
+		int no = sc.nextInt();
+		sc.nextLine();
+		
+		// 글 번호(no)를 전달하여 게시글 정보 데이터 요청
+		Board board = boardService.select(no);
+		// 게시글 정보 출력
+		print(board);
+	}
 
 	public static void main(String[] args) {
 		int menuNo = 0;
@@ -110,10 +125,24 @@ public class Main {
 				case 1:
 					list(); // 게시글 목록
 					break;
+				case 2:
+					select(); // 게시글 조회
+					break;
+				case 3:
+//					insert(); // 게시글 등록
+					break;
+				case 4:
+//					update(); // 게시글 수정
+					break;
+				case 5:
+//					delete(); // 게시글 삭제
+					break;
 			}
 		}
 		System.out.println("프로그램을 종료합니다!");
 	}
+
+	
 
 
 
