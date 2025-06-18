@@ -31,8 +31,19 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int insert(Board board) {
-		// TODO Auto-generated method stub
-		return 0;
+		// 게시글 정보를 전달하여 DB에 데이터 등록 요청
+		int result = boardDAO.insert(board);
+		// 적용된 데이터 개수를 반환
+		// 0: 데이터 등록 실패
+		// 1: 데이터 등록 성공
+		
+		if (result > 0) {
+			System.out.println("데이터 등록 성공!");
+		} else {
+			System.out.println("데이터 등록 실패!");
+		}
+		
+		return result;
 	}
 
 	@Override

@@ -105,6 +105,31 @@ public class Main {
 		// 게시글 정보 출력
 		print(board);
 	}
+	
+	/**
+	 * 게시글 정보 입력
+	 * @return
+	 */
+	private static Board input() {
+		System.out.print("제목: ");
+		String title = sc.nextLine();
+		System.out.print("작성자: ");
+		String writer = sc.nextLine();
+		System.out.print("내용: ");
+		String content = sc.nextLine();
+		
+		Board board = new Board(title, writer, content);
+		return board;
+	}
+	
+	
+	/**
+	 * 게시글 등록
+	 */
+	private static void insert() {
+		System.out.println("========== 게시글 등록 ==========");
+		
+	}
 
 	public static void main(String[] args) {
 		int menuNo = 0;
@@ -129,7 +154,7 @@ public class Main {
 					select(); // 게시글 조회
 					break;
 				case 3:
-//					insert(); // 게시글 등록
+					insert(); // 게시글 등록
 					break;
 				case 4:
 //					update(); // 게시글 수정
@@ -141,6 +166,8 @@ public class Main {
 		}
 		System.out.println("프로그램을 종료합니다!");
 	}
+
+	
 
 	
 
