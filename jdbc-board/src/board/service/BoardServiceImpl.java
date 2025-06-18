@@ -48,14 +48,29 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int update(Board board) {
-		// TODO Auto-generated method stub
-		return 0;
+		// 게시글 정보를 전달하여 DB에 데이터 수정 요청
+		int result = boardDAO.update(board);
+		// 적용된 데이터 개수를 반환
+		// 0: 데이터 수정 실패
+		// 1: 데이터 수정 성공
+		
+		if (result > 0) System.out.println("데이터 수정 성공!");
+		else System.out.println("데이터 수정 실패!");
+		
+		return result;
 	}
 
 	@Override
 	public int delete(int no) {
-		// TODO Auto-generated method stub
-		return 0;
+		// 게시글 번호(no)를 DB로 넘겨주고 게시글 삭제 요청
+		int result = boardDAO.delete(no);
+		// 적용된 데이터 개수를 반환
+		// 0: 데이터 삭제 실패
+		// 1: 데이터 삭제 성공
+		
+		if (result > 0) System.out.println("데이터 삭제 성공!");
+		else System.out.println("데이터 삭제 실패!");
+	
+		return result;
 	}
-
 }

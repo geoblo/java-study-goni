@@ -149,7 +149,16 @@ public class Main {
 		int no = sc.nextInt();
 		sc.nextLine();
 		
-		input();
+		Board board = input();
+		board.setNo(no);
+		
+		// 게시글 수정 요청
+		int result = boardService.update(board);
+		if (result > 0) {
+			System.out.println("★ 게시글이 수정되었습니다.");
+		} else {
+			System.out.println("★ 게시글 수정에 실패하였습니다.");
+		}
 	}
 	
 	/**
@@ -162,9 +171,14 @@ public class Main {
 		int no = sc.nextInt();
 		sc.nextLine();
 		
+		// 게시글 삭제 요청
+		int result = boardService.delete(no);
+		if (result > 0) {
+			System.out.println("★ 게시글을 삭제하였습니다.");
+		} else {
+			System.out.println("★ 게시글 삭제에 실패하였습니다.");
+		}
 	}
-
-	
 
 	public static void main(String[] args) {
 		int menuNo = 0;
@@ -201,5 +215,4 @@ public class Main {
 		}
 		System.out.println("프로그램을 종료합니다!");
 	}
-
 }
