@@ -19,7 +19,9 @@ DESC board;
 
 -- 추가
 INSERT INTO board (title, writer, content)
-VALUES ('게시글 제목1', '김재', '집에 가고 싶다.');
+VALUES 
+	('게시글 제목1', '김재', '집에 가고 싶다.'),
+    ('게시글 제목2', '현', '집에 안가');
 
 -- 조회
 SELECT * FROM board; -- 전체 게시글 목록 조회
