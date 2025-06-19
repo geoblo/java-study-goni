@@ -53,3 +53,4 @@ CREATE TABLE comment (
   -- 예: board의 특정 게시글이 삭제되면 그 게시글에 달린 comment들도 자동으로 삭제
 );
 
+
