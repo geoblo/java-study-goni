@@ -1,5 +1,8 @@
 package sec03.exam04.quiz;
 
+import java.io.File;
+import java.util.UUID;
+
 public class Quiz1 {
 	// Quiz
 //	디렉터리 이름으로 UUID 사용하기
@@ -11,10 +14,18 @@ public class Quiz1 {
 //	단, 폴더명에 -(하이픈)은 없어야 합니다.
 	
 //	[출력]
-//	임시 폴더 생성: C:\test\4e9719b5f849425cb62cfc2711772a6b
+//	임시 폴더 생성: C:\test\sub\4e9719b5f849425cb62cfc2711772a6b
 	
 	public static void main(String[] args) {
+		String uuid = UUID.randomUUID().toString();
+		uuid = uuid.replace("-", "");
 		
+		File tempDir = new File("C:/test/sub/" + uuid);
+		
+		if (!tempDir.exists()) {
+			tempDir.mkdirs();
+			System.out.println("임시 폴더 생성: " + tempDir.getPath());
+		}
 	}
 
 }
